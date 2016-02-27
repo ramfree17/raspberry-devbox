@@ -11,7 +11,10 @@ Vagrant::Config.run do |config|
     box.vm.box = "ubuntu-10.04.3-server-amd64-asq"
     # The url from where the 'config.vm.box' box will be fetched if it
     # doesn't already exist on the user's system.
-    box.vm.box_url = "http://asquera-share.s3.amazonaws.com/boxes/base/ubuntu-10.04.3-server-amd64-asq.box"
+    #box.vm.box_url = "http://asquera-share.s3.amazonaws.com/boxes/base/ubuntu-10.04.3-server-amd64-asq.box"
+    
+    # Pointing to a local saved copy of the image to conserve bandwidth
+    box.vm.box_url = "file:///storage/vm/Images/ubuntu-10.04.3-server-amd64-asq.box"
     
     # Boot with a GUI so you can see the screen. (Default is headless)
     #box.vm.boot_mode = :gui
